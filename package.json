@@ -1,0 +1,31 @@
+{
+  "name": "matrix-live-line-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "fuser tcp/9999 -k && nodemon ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sajid",
+  "license": "ISC",
+  "dependencies": {
+    "async-redis": "^2.0.0",
+    "axios": "^1.6.7",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "geoip-lite": "^1.4.9",
+    "iplocation": "^7.2.0",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "mongoose": "^7.5.3",
+    "multer": "^1.4.5-lts.1",
+    "node-cron": "^3.0.3",
+    "node-geolocation": "^1.15.14"
+  }
+}

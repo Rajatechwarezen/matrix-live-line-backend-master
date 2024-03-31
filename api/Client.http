@@ -1,0 +1,56 @@
+#  @URL=http://38.242.135.119:4598
+#  @URL=https://maabookonline.com
+
+@URL=http://localhost:3034
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTU1ZGNlYzI4NTY4NTdjODMyOGY3NjciLCJpYXQiOjE3MDAxMjY0MzEsImV4cCI6NDg1NTg4NjQzMX0.V4FxTkSBy2eZ5i5kNrdZ34-LJPANuEkixLrQNTsKT0s
+
+
+############## Term and condition API CLIENT
+POST {{URL}}/api/v1/getUserByMobile HTTP/1.1
+Content-type: application/json
+
+{
+    "mobile":"8130323284"
+}
+
+
+
+############## Term and condition API CLIENT
+POST {{URL}}/api/v1/userRegisterOrLogin HTTP/1.1
+Content-type: application/json
+
+{
+    "name":"jarvis",
+    "mobile":"999999997" 
+}
+
+############## Term and condition API CLIENT
+GET {{URL}}/api/v1/getProfile HTTP/1.1
+Content-type: application/json
+Authorization: {{token}} 
+
+############## Term and condition API CLIENT
+POST {{URL}}/api/v1/submitKyc HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+      "fullName": "Tom Doe",
+      "adharNo": "245836547896",
+      "frontAdharImg": "358920095555",
+      "backAdharImg": "358920095555",
+      "panNo": "8754wc54",
+      "panImg": "cjcn01478",
+      "dob": "18/01/2001"
+}
+
+############## Term and condition API CLIENT
+GET {{URL}}/api/v1/getKycDetailByUserId HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+
+
+
+

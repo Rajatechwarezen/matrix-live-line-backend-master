@@ -1,0 +1,245 @@
+@URL=http://localhost:8000
+
+# @URL=https://MaaaOnlineBook.com
+
+
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaHVuayI6MSwiaXNBZG1pbiI6dHJ1ZSwidXNlck5hbWUiOiJhZG1pbiIsImlhdCI6MTY5OTg4MjAzMywiZXhwIjoxNzMxNDE4MDMzfQ.Pi805msEV_InV5hvB4we0DXZJnU3vCe3AJ66DwtgEXk
+
+
+############## Term and condition API ADMIN Login
+POST {{URL}}/api/dadmin/adminLogin HTTP/1.1
+Content-type: application/json
+
+{
+   "userName":"admin",
+   "password":"123456"
+}
+
+############## Term and condition API ADMIN CREATE USER
+POST {{URL}}/api/dadmin/createUserByAdmin HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "name":"ironman",
+   "mobile":"9999999999"
+}
+
+
+
+############## Term and condition API ADMIN Login
+POST {{URL}}/api/dadmin/changePasswordAdmin HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "newpassword":"123456",
+   "confirmpassword":"123456"
+}
+
+############## Term and condition API ADMIN Login
+POST {{URL}}/api/dadmin/getUserList HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "keyWord":"",
+   "pageNo":1,
+   "size":10
+}
+
+############## Term and condition API ADMIN Login
+POST {{URL}}/api/dadmin/deleteUser HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "id":"6555bcfdeff9e84bbe13c601"
+}
+
+############## Term and condition API ADMIN Login
+POST {{URL}}/api/dadmin/getUserByUserId HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "userId":"6555bcfdeff9e84bbe13c601"
+}
+
+
+////////////////////////////// EVENT //////////////////////////////////////////////
+
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/createEvent HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "que":"Is A to Z have 26 alphabet ? ",
+   "image":"slider.jpg",
+   "currentMatch":"English",
+   "currentScore":"nothing",
+   "eventStartTime":"11/18/2023",
+   "eventEndTime":"11/18/2023",
+   "queSource":"Any"
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/updateEvent HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "id":"6555bcfdeff9e84bbe13c601",
+   "que":"Is A to Z have 26 alphabet ??? ",
+   "image":"slider.jpg",
+   "currentMatch":"English",
+   "currentScore":"nothing",
+   "eventStartTime":"11/18/2023",
+   "eventEndTime":"11/18/2023",
+   "queSource":"Any"
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/updateEventStatus HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+    "id":"6555bcfdeff9e84bbe13c601"
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/getEventById HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+    "id":"6555bcfdeff9e84bbe13c601"
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/deleteEvent HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+    "id":"6555bddc1949d77e5ab60f01"
+}
+
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/getFilteredEventList HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "status":"",
+   "keyWord":"",
+   "pageNo":1,
+   "size":10
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/getAllEvent HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+
+////////////////////////////// EVENT OPTION //////////////////////////////////////////////
+
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/createEventOption HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "eventId":"6558b121fff71f7b3e5ea420",
+   "option":"YES",
+   "price":"0.5",
+   "quantity":5000
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/updateEventOption HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "id":"6555c58cbf605bc1dc60705a",
+   "option":"NO",
+   "price":"1.5",
+   "quantity":5000
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/updateEventOptionStatus HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+    "id":"6555c58cbf605bc1dc60705a"
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/getEventOptionById HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+    "id":"6555c58cbf605bc1dc60705a"
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/deleteEventOption HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+    "id":"6555c58cbf605bc1dc60705a"
+}
+
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/getEventOptionListByEventId HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "eventId":"6555c14a12ac54d574148621",
+   "option":"NO",
+   "keyWord":"",
+   "pageNo":1,
+   "size":10
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/getAllEventOptionByEventId HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "eventId":"6555c14a12ac54d574148621"
+}
+
+
+/////////////////////////////    KYC     /////////////////////
+
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/updateStatusKyc HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}
+
+{
+   "comment":"",
+   "status":"REJECT",
+   "id":"6555e5ae262891ea66067743"
+}
+
+############## Term and condition 
+POST {{URL}}/api/dadmin/getLocation HTTP/1.1
+Content-type: application/json
+Authorization: {{token}}

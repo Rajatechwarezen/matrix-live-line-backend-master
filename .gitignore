@@ -1,0 +1,12 @@
+node_modules
+/node_modules
+package-lock.json
+
+config/**/*.json
+./config/**/*.json
+
+/config
+config
+upload/
+
+

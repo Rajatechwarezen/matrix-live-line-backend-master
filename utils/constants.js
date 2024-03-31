@@ -1,0 +1,17 @@
+module.exports = Object.freeze({
+    OTP_LENGTH: 4,
+    NOT_FOUND: 1404,
+    SERVER_ERROR: 1500,
+    SUCCESS: 1200,
+    ACCESS_DENIED: 1403,
+    NOT_VERIFIED: 1405,
+    ERROR_TRUE: true,
+    ERROR_FALSE: false,
+    TRUE: true,
+    FALSE: false,
+    DATA_NULL: null,
+    ERROR_CODE_TWO: 2,
+    INVALID_TOKEN: 3,
+    ERROR_CODE_ONE: 1,
+    ERROR_CODE_ZERO: 0,
+});
